@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompressFile - Compresseur de Fichiers en Ligne</title>
+
+    <!-- Google Fonts - DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="fas fa-compress-alt me-2"></i>CompressFile
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Fonctionnalités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#compress">Compresser</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Compressez vos fichiers <span class="text-gradient">instantanément</span>
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        Une solution moderne et sécurisée pour compresser tous vos fichiers directement dans votre navigateur. Rapide, gratuit et sans inscription.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#compress" class="btn btn-primary btn-lg px-4">
+                            <i class="fas fa-compress-alt me-2"></i>Commencer
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                         alt="Compression de fichiers" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-3">Pourquoi choisir CompressFile ?</h2>
+                <p class="lead text-white-50">Des fonctionnalités avancées pour tous vos besoins de compression</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">100% Sécurisé</h4>
+                    <p class="text-muted">Tous vos fichiers sont traités localement dans votre navigateur. Aucune donnée n'est envoyée sur nos serveurs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Ultra Rapide</h4>
+                    <p class="text-muted">Compression instantanée grâce à notre technologie JavaScript avancée. Pas d'attente, pas de files d'attente.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-archive"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Multi-formats</h4>
+                    <p class="text-muted">Supporte tous types de fichiers : images, documents, vidéos, audio et bien plus encore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compression Section -->
+<section id="compress" class="compress-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="compress-card">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-white mb-3">Compressez vos fichiers</h3>
+                        <p class="text-white-50">Glissez-déposez vos fichiers ou cliquez pour les sélectionner</p>
+                    </div>
+
+                    <div id="drop-zone" class="drop-zone mb-4">
+                        <div class="drop-zone-content">
+                            <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                            <h5>Glissez vos fichiers ici</h5>
+                            <p class="text-muted">ou cliquez pour sélectionner</p>
+                            <input type="file" id="file-input" multiple accept="*/*">
+                        </div>
+                    </div>
+
+                    <div id="file-list" class="file-list mb-4" style="display: none;">
+                        <h6 class="text-white mb-3">Fichiers sélectionnés :</h6>
+                        <div id="files-container"></div>
+                    </div>
+
+                    <div class="text-center">
+                        <button id="compress-btn" class="btn btn-primary btn-lg px-5" disabled>
+                            <i class="fas fa-compress-alt me-2"></i>Compresser en ZIP
+                        </button>
+                    </div>
+
+                    <div id="progress-section" class="mt-4" style="display: none;">
+                        <div class="progress">
+                            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <p id="progress-text" class="text-center mt-2 text-white-50">Compression en cours...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-white-50 mb-0">&copy; 2024 CompressFile. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JSZip Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<!-- FileSaver.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/app.js"></script>
+</body>
+</html>
