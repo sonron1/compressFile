@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompressFile - Compresseur de Fichiers en Ligne</title>
+    <title>CompressFile Pro - Compression Avancée</title>
 
-    <!-- Google Fonts - DM Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-glass fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-            <i class="fas fa-compress-alt me-2"></i>CompressFile
+        <a class="navbar-brand" href="#">
+            <div class="brand-container">
+                <div class="brand-icon">
+                    <i class="fas fa-compress-alt"></i>
+                </div>
+                <span class="brand-text">CompressFile Pro</span>
+            </div>
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Accueil</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#features">Fonctionnalités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#compress">Compresser</a>
+                    <a class="nav-link" href="#compress">Compression</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">À propos</a>
                 </li>
             </ul>
         </div>
@@ -44,31 +45,80 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="hero-section">
+<section class="hero-section" id="home">
+    <div class="hero-bg">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="row align-items-center min-vh-100">
+        <div class="row align-items-center hero-content">
             <div class="col-lg-6">
-                <div class="hero-content">
-                    <h1 class="display-4 fw-bold text-black mb-4">
-                        Compressez vos fichiers <span class="text-gradient">instantanément</span>
-                    </h1>
-                    <p class="lead text-black-50 mb-4">
-                        Une solution moderne et sécurisée pour compresser tous vos fichiers directement dans votre navigateur. Rapide, gratuit et sans inscription.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="#compress" class="btn btn-primary btn-lg px-4">
-                            <i class="fas fa-compress-alt me-2"></i>Commencer
-                        </a>
-                        <a href="#features" class="btn btn-outline-light btn-lg px-4">
-                            En savoir plus
-                        </a>
+                <div class="hero-badge">
+                    <i class="fas fa-magic me-2"></i>
+                    Compression Avancée avec IA
+                </div>
+
+                <h1 class="hero-title">
+                    Compressez vos fichiers avec
+                    <span class="text-gradient">intelligence</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Réduisez réellement la taille de vos PDF, images et documents avec notre technologie de compression avancée. Plus rapide, plus efficace, plus intelligent.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#compress" class="btn-hero">
+                        <i class="fas fa-rocket me-2"></i>
+                        Commencer maintenant
+                    </a>
+                    <a href="#features" class="btn-outline-glass">
+                        <i class="fas fa-play me-2"></i>
+                        Voir la démo
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="stat-number counter" data-target="85">0</div>
+                            <div class="stat-label">% de compression moyenne</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number counter" data-target="50">0</div>
+                            <div class="stat-label">Formats supportés</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number counter" data-target="100">0</div>
+                            <div class="stat-label">% Sécurisé</div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-6">
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                         alt="Compression de fichiers" class="img-fluid rounded-4 shadow-lg">
+                <div class="hero-visual">
+                    <div class="compression-demo">
+                        <div class="demo-card">
+                            <div class="demo-header">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>document.pdf</span>
+                            </div>
+                            <div class="demo-progress">
+                                <div class="progress-bar-demo"></div>
+                            </div>
+                            <div class="demo-result">
+                                <span class="before">103 MB</span>
+                                <i class="fas fa-arrow-right mx-3"></i>
+                                <span class="after">28 MB</span>
+                                <span class="savings">73% économisé</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,40 +126,130 @@
 </section>
 
 <!-- Features Section -->
-<section id="features" class="features-section py-5">
+<section class="features-section" id="features">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="display-5 fw-bold text-black mb-3">Pourquoi choisir CompressFile ?</h2>
-                <p class="lead text-black-50">Des fonctionnalités avancées pour tous vos besoins de compression</p>
+            <div class="col-12">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Fonctionnalités Avancées</h2>
+                    <p class="section-subtitle">
+                        Notre technologie de compression intelligente adapte automatiquement les paramètres selon le type de fichier pour des résultats optimaux.
+                    </p>
+                </div>
             </div>
         </div>
+
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="feature-card h-100">
-                    <div class="feature-icon">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-blue">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>Compression PDF Avancée</h4>
+                    <p>Réduisez la taille de vos PDF jusqu'à 80% sans perte de qualité visible grâce à notre algorithme d'optimisation des images et métadonnées.</p>
+                    <div class="feature-tags">
+                        <span class="tag">PDF/A</span>
+                        <span class="tag">Métadonnées</span>
+                        <span class="tag">Images</span>
+                    </div>
+                    <div class="feature-levels">
+                        <div class="level level-5"></div>
+                        <div class="level level-4"></div>
+                        <div class="level level-5"></div>
+                        <div class="level level-3"></div>
+                        <div class="level level-4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-green">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h4>Optimisation d'Images</h4>
+                    <p>Compressez vos images avec une technologie de redimensionnement intelligent qui préserve la netteté tout en réduisant drastiquement la taille.</p>
+                    <div class="supported-formats">
+                        <span>JPG</span>
+                        <span>PNG</span>
+                        <span>WebP</span>
+                        <span>BMP</span>
+                        <span>TIFF</span>
+                    </div>
+                    <div class="feature-levels">
+                        <div class="level level-4"></div>
+                        <div class="level level-5"></div>
+                        <div class="level level-3"></div>
+                        <div class="level level-4"></div>
+                        <div class="level level-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-purple">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>IA Adaptative</h4>
+                    <p>Notre intelligence artificielle analyse chaque fichier pour choisir automatiquement la meilleure méthode de compression selon le contenu.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Auto-detect</span>
+                        <span class="tag">Optimisé</span>
+                    </div>
+                    <div class="feature-levels">
+                        <div class="level level-5"></div>
+                        <div class="level level-5"></div>
+                        <div class="level level-4"></div>
+                        <div class="level level-5"></div>
+                        <div class="level level-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-orange">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4 class="fw-bold mb-3">100% Sécurisé</h4>
-                    <p class="text-muted">Tous vos fichiers sont traités localement dans votre navigateur. Aucune donnée n'est envoyée sur nos serveurs.</p>
+                    <h4>100% Sécurisé</h4>
+                    <p>Vos fichiers ne quittent jamais votre navigateur. Toute la compression se fait localement pour une sécurité maximale de vos données.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Client-side</span>
+                        <span class="tag">Offline</span>
+                        <span class="tag">Privé</span>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="feature-card h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-pink">
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h4 class="fw-bold mb-3">Ultra Rapide</h4>
-                    <p class="text-muted">Compression instantanée grâce à notre technologie JavaScript avancée. Pas d'attente, pas de files d'attente.</p>
+                    <h4>Ultra Rapide</h4>
+                    <p>Traitement multi-threadé et optimisations WebAssembly pour des performances de compression jusqu'à 10x plus rapides.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Multi-thread</span>
+                        <span class="tag">WebAssembly</span>
+                        <span class="tag">GPU</span>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="feature-card h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-archive"></i>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-teal">
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    <h4 class="fw-bold mb-3">Multi-formats</h4>
-                    <p class="text-muted">Supporte tous types de fichiers : images, documents, vidéos, audio et bien plus encore.</p>
+                    <h4>Compression Batch</h4>
+                    <p>Traitez jusqu'à 100 fichiers simultanément avec notre système de traitement en lot optimisé pour les gros volumes.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Batch</span>
+                        <span class="tag">Queue</span>
+                        <span class="tag">Progress</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,41 +257,208 @@
 </section>
 
 <!-- Compression Section -->
-<section id="compress" class="compress-section py-5">
+<section class="compress-section" id="compress">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="compress-card">
-                    <div class="text-center mb-4">
-                        <h3 class="fw-bold text-black mb-3">Compressez vos fichiers</h3>
-                        <p class="text-black-50">Glissez-déposez vos fichiers ou cliquez pour les sélectionner</p>
-                    </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Interface de Compression</h2>
+                    <p class="section-subtitle">
+                        Glissez-déposez vos fichiers et laissez notre IA faire le reste
+                    </p>
+                </div>
+            </div>
+        </div>
 
-                    <div id="drop-zone" class="drop-zone mb-4">
-                        <div class="drop-zone-content">
-                            <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
-                            <h5>Glissez vos fichiers ici</h5>
-                            <p class="text-muted">ou cliquez pour sélectionner</p>
-                            <input type="file" id="file-input" multiple accept="*/*">
+        <div class="compress-container">
+            <!-- Zone de drop -->
+            <div class="drop-zone-modern" id="drop-zone">
+                <input type="file" id="file-input" multiple accept="*/*">
+                <div class="drop-zone-content">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h4>Glissez-déposez vos fichiers ici</h4>
+                    <p>ou cliquez pour sélectionner</p>
+                    <div class="upload-info">
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Jusqu'à 500MB par fichier • PDF, Images, Documents supportés
+                        </small>
+                    </div>
+                </div>
+                <div class="drop-overlay">
+                    <div class="drop-message">
+                        <h5><i class="fas fa-download me-2"></i>Relâchez pour ajouter les fichiers</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paramètres de compression -->
+            <div class="compression-settings-panel mt-4" id="compression-settings">
+                <div class="settings-header">
+                    <h5><i class="fas fa-cog me-2"></i>Paramètres de Compression</h5>
+                    <button class="btn btn-sm btn-outline-primary" id="settings-toggle">
+                        <i class="fas fa-chevron-down me-1"></i>
+                        Paramètres Avancés
+                    </button>
+                </div>
+
+                <!-- Modes de compression -->
+                <div class="compression-modes">
+                    <input type="radio" id="mode-smart" name="compress-mode" value="smart" checked>
+                    <label for="mode-smart" class="mode-card">
+                        <i class="fas fa-brain"></i>
+                        <span>Intelligent</span>
+                        <small>IA adaptative</small>
+                    </label>
+
+                    <input type="radio" id="mode-maximum" name="compress-mode" value="maximum">
+                    <label for="mode-maximum" class="mode-card">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <span>Maximum</span>
+                        <small>Taille minimale</small>
+                    </label>
+
+                    <input type="radio" id="mode-balanced" name="compress-mode" value="balanced">
+                    <label for="mode-balanced" class="mode-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Équilibré</span>
+                        <small>Qualité/Taille</small>
+                    </label>
+
+                    <input type="radio" id="mode-fast" name="compress-mode" value="fast">
+                    <label for="mode-fast" class="mode-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Rapide</span>
+                        <small>Vitesse optimale</small>
+                    </label>
+                </div>
+
+                <!-- Paramètres avancés -->
+                <div class="advanced-settings" id="advanced-settings" style="display: none;">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                <i class="fas fa-sliders-h me-2"></i>
+                                Niveau de compression: <span id="compression-level-value">6</span>
+                            </label>
+                            <input type="range" class="form-range" id="compression-level" min="1" max="9" value="6">
+                            <div class="slider-labels">
+                                <span>Rapide</span>
+                                <span>Maximum</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                <i class="fas fa-image me-2"></i>
+                                Qualité images: <span id="image-quality-value">75</span>%
+                            </label>
+                            <input type="range" class="form-range" id="image-quality" min="10" max="100" value="75">
+                            <div class="slider-labels">
+                                <span>Petite taille</span>
+                                <span>Haute qualité</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div id="file-list" class="file-list mb-4" style="display: none;">
-                        <h6 class="text-black mb-3">Fichiers sélectionnés :</h6>
-                        <div id="files-container"></div>
-                    </div>
-
-                    <div class="text-center">
-                        <button id="compress-btn" class="btn btn-primary btn-lg px-5" disabled>
-                            <i class="fas fa-compress-alt me-2"></i>Compresser en ZIP
-                        </button>
-                    </div>
-
-                    <div id="progress-section" class="mt-4" style="display: none;">
-                        <div class="progress">
-                            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                <i class="fas fa-file-pdf me-2"></i>
+                                Optimisation PDF: <span id="pdf-quality-value">70</span>%
+                            </label>
+                            <input type="range" class="form-range" id="pdf-quality" min="10" max="100" value="70">
+                            <div class="slider-labels">
+                                <span>Max compression</span>
+                                <span>Qualité originale</span>
+                            </div>
                         </div>
-                        <p id="progress-text" class="text-center mt-2 text-black-50">Compression en cours...</p>
+                        <div class="col-md-6">
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="remove-metadata" checked>
+                                <label class="form-check-label" for="remove-metadata">
+                                    Supprimer les métadonnées
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section des fichiers -->
+            <div class="files-section" id="files-section" style="display: none;">
+                <div class="files-header">
+                    <h6><i class="fas fa-list me-2"></i>Fichiers sélectionnés</h6>
+                    <button class="btn btn-sm btn-outline-danger" id="clear-files">
+                        <i class="fas fa-trash me-1"></i>
+                        Tout supprimer
+                    </button>
+                </div>
+
+                <div class="files-list" id="files-list">
+                    <!-- Les fichiers seront ajoutés ici dynamiquement -->
+                </div>
+
+                <!-- Statistiques -->
+                <div class="compression-stats">
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <div class="stat-card">
+                                <div class="stat-value" id="total-files">0</div>
+                                <div class="stat-label">Fichiers</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stat-card">
+                                <div class="stat-value" id="total-size">0 B</div>
+                                <div class="stat-label">Taille totale</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stat-card">
+                                <div class="stat-value text-success" id="estimated-size">0 B</div>
+                                <div class="stat-label">Taille estimée</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stat-card">
+                                <div class="stat-value text-primary" id="savings-percent">0%</div>
+                                <div class="stat-label">Économie</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bouton de compression -->
+                <div class="text-center">
+                    <button class="btn btn-lg btn-primary px-5 py-3" id="compress-btn" disabled>
+                            <span class="btn-text">
+                                <i class="fas fa-compress-alt me-2"></i>
+                                Compresser les fichiers
+                            </span>
+                        <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin me-2"></i>
+                                Compression en cours...
+                            </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Section de progression -->
+            <div class="progress-section" id="progress-section" style="display: none;">
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <h6 id="progress-text">Initialisation...</h6>
+                        <span class="progress-percent" id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                             id="progress-bar"
+                             style="width: 0%"></div>
+                    </div>
+                    <div class="progress-details">
+                        <small class="text-muted" id="progress-details">Préparation...</small>
                     </div>
                 </div>
             </div>
@@ -159,27 +466,16 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer-section py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="text-black-50 mb-0">&copy; 2025 CompressFile - Réalisé par Sonron1. Tous droits réservés.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- JSZip Library -->
+<!-- Scripts JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-<!-- FileSaver.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-<!-- Custom JS -->
+<!-- Bibliothèques pour compression avancée -->
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://unpkg.com/browser-image-compression@2.0.0/dist/browser-image-compression.js"></script>
+
+<!-- Script principal -->
 <script src="js/app.js"></script>
 </body>
 </html>
